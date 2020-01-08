@@ -66,6 +66,7 @@ test_nginx_conf: # CI_JOB_NAME
 crossplane_nginx_conf: # CI_JOB_NAME
   stage: test
   script:
+    - apk install jq
     - docker run --rm -t -a stdout --name $NAME_CONTAINER_CROSSPLANE --sysctl net.ipv4.ip_nonlocal_bind=1 -v "$(pwd)/etc/nginx/:/etc/nginx/" $CONTAINER_CROSSPLANE crossplane parse /etc/nginx/nginx.conf | jq '.status, .errors[]'
 
 push: # CI_JOB_NAME
