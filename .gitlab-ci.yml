@@ -67,8 +67,9 @@ test_nginx_conf: # CI_JOB_NAME
   stage: test
   script:
     - docker pull $CONTAINER_TEST_IMAGE
-    - docker run --rm -t -a stdout --name $CONTAINER_TEST_IMAGE --sysctl net.ipv4.ip_nonlocal_bind=1 -v "$(pwd)/etc/nginx/:/etc/nginx/" $CONTAINER_TEST_IMAGE nginx -t
-
+    #- docker run --rm -t -a stdout --name $CONTAINER_TEST_IMAGE --sysctl net.ipv4.ip_nonlocal_bind=1 -v "$(pwd)/etc/nginx/:/etc/nginx/" $CONTAINER_TEST_IMAGE nginx -t
+    - docker run $CONTAINER_TEST_IMAGE nginx -t
+    
 test_crossplane_nginx_conf: # CI_JOB_NAME
   stage: test
   script:
