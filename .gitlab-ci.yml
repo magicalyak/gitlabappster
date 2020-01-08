@@ -22,7 +22,7 @@ variables:
   # container, thanks to volume mount from config.toml
   DOCKER_TLS_CERTDIR: "/certs"
   #CONTAINER_CROSSPLANE: registry.gitlab.f5demolab.com/$GITLAB_USER_LOGIN/nginx-plus-dockerfiles:ubuntu18.04_crossplane
-  REGISTRY_URL: registry.gitlab.f5demo.com
+  REGISTRY_URL: registry.gitlab.f5demolab.com
   CONTAINER_CROSSPLANE: $REGISTRY_URL/f5-demo-lab/nginx-plus-dockerfiles:ubuntu18.04_crossplane
   NAME_CONTAINER_NGINX: nginx-plus-appster-demo # container name
   NAME_CONTAINER_CROSSPLANE: nginx-plus-crossplane-appster-demo
