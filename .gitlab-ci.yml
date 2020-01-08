@@ -36,7 +36,8 @@ stages:
   - clean_up
 
 variables:
-  CONTAINER_CROSSPLANE: registry.gitlab.f5demolab.com/$GITLAB_USER_LOGIN/nginx-plus-dockerfiles:ubuntu18.04_crossplane
+  #CONTAINER_CROSSPLANE: registry.gitlab.f5demolab.com/$GITLAB_USER_LOGIN/nginx-plus-dockerfiles:ubuntu18.04_crossplane
+  CONTAINER_CROSSPLANE: registry.gitlab.f5demolab.com/f5-demo-lab/nginx-plus-dockerfiles:ubuntu18.04_crossplane
   NAME_CONTAINER_NGINX: nginx-plus-appster-demo # container name
   NAME_CONTAINER_CROSSPLANE: nginx-plus-crossplane-appster-demo
 
